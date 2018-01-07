@@ -109,7 +109,7 @@ plt.title("Bandstop")
     
 The above code produces this output:
 
-[Frequency response](Frequency_Response.png)
+![Frequency response](Frequency_Response.png)
     
 
 ## Installation
