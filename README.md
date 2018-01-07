@@ -14,6 +14,8 @@ The structure of this readme is heavily based on the [IIRJ filter class' readme 
 
 ## Usage
 
+### Importing the class
+
 `from IIR2Filter import IIR2Filter`
 
 ### Instantiation of the class
