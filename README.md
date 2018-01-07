@@ -60,12 +60,12 @@ The structure of this readme is heavily based on the [IIRJ filter class' readme 
 ### Filtering
 Sample by sample for realtime processing:
 
-```python
+```
 myValueFiltered = MyFilter.filter(myValue)
 ```
 Or if the signal has already been acquired and is stored in the array `mySignal`:
 
-```python
+```
 for i in range(len(mySignal)):
   mySignalFiltered[i] = MyFilter.filter(mySignal[i])
 ```
