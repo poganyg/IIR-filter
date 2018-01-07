@@ -110,6 +110,7 @@ plt.title("Bandstop")
 The above code produces this output:
 
 <p align="center">
+  <img src="Frequency_Response.png" alt="Frequency response">
   ![Frequency response](Frequency_Response.png)
 </p>
     
