@@ -1,5 +1,5 @@
 # IIR-filter
-An IIR filter class implementation in Python.
+An IIR filter class implementation in Python 3.
 
 This filter class is capable to do low/high/bandpass and stopband filterings with different filter designs: Butterworth or Chebyshev Type I/II.
 
