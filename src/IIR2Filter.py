@@ -9,16 +9,16 @@ MyFilter = IIR2Filter(order,cutoff,filterType,design='butter',rp=1,rs=1,fs=0)
     
 At the instantiation of the filter the following parameters are compulsory:
     order:positive integer
-        A positive integer, representing the order of the desired filter.
+        It represents the order of the desired filter.
         Can be odd or even number, the filter will create a chain of second
         order filters and an extra first order one if necessary.
-    cutoff:array/positive integer
+    cutoff:array/positive float
         Depending on the desired filter 1 cutoff frequency is to be 
         enetered as a positive float for low/highpass filters or
-        2 cutoff frequenices to be entered in an array as a positive float
+        2 cutoff frequenices to be entered in an array as positive floats
         for bandstop and bandpass filters. These cutoff frequencies can be
         either entered as normalised to the Nyquist frequency (1 =
-        Nyquist frequency) or as Hz (0 < f < Nyquist), but in that case fs,
+        Nyquist frequency) or as Hz (0 < f < Nyquist), but in this case fs,
         the sampling frequency has to be passed too.
     filterType:string
         Options are: lowpass, highpass, bandpass, bandstop
@@ -65,7 +65,7 @@ import scipy.signal as signal
 
 class IIR2Filter(object):           
     
-    def createCoeffs(self,order,cutoff,filterType,design='butter',rp=0,rs=0,fs=0):
+    def createCoeffs(self,order,cutoff,filterType,design='butter',rp=1,rs=1,fs=0):
         
         #defining the acceptable inputs for the design and filterType params
         self.designs = ['butter','cheby1','cheby2']
@@ -101,7 +101,7 @@ class IIR2Filter(object):
         
         return self.COEFFS
         
-    def __init__(self,order,cutoff,filterType,design='butter',rp=0,rs=0,fs=0):
+    def __init__(self,order,cutoff,filterType,design='butter',rp=1,rs=1,fs=0):
         self.COEFFS = self.createCoeffs(order,cutoff,filterType,design,rp,rs,fs)
         self.acc_input = np.zeros(len(self.COEFFS))
         self.acc_output = np.zeros(len(self.COEFFS))
