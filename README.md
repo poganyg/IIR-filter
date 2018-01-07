@@ -114,25 +114,3 @@ The above code produces this output:
 </p>
     
 
-## Installation
-Just run: `mvn install` to add it to your local maven respository or
-just point your project to Maven Central:
-
-## Testing
-`mvn test` creates impulse responses in the subdirectories
-for the different filters: `target/surefire-reports`.
-
-To see the frequency responses install octave, copy the script
-'src/test/resources/filtertest.m'
-in these subdirectories and run it from there. You should see the
-different frequency reponses for high/low/stop/bandpass. You can try
-out different filter parameters by modifiing the test
-scripts and re-run 'mvn test'.
-
-The script DetectorTest uses a bandpass filter to detect the
-heartbeats of an ECG recording faking a matched filter which could
-be also seen as a 1st approximation of a wavelet. The heartrate is
-stored in hr.txt.
-
-
-
